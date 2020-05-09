@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./components/Card";
+import { robots } from "./components/robots";
 import "./App.css";
 
 class App extends React.Component {
@@ -7,10 +8,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="card-section">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {robots.map((robot, i) => {
+            return <Card robot={robot} key={i} />;
+          })}
         </div>
       </div>
     );
