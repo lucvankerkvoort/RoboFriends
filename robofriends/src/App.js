@@ -14,13 +14,18 @@ class App extends React.Component {
     this.setState({ searchfield: e.target.value });
   };
   render() {
-    console.log(this.state);
-    const { robots } = this.state;
+    const filterRobot = this.state.robots.filter((robot) => {
+      console.log(robot.name);
+      return robot.name
+        .toLowerCase()
+        .includes(this.state.searchfield.toLowerCase());
+    });
+
     return (
       <div className="App">
         <h1>RoboFriends</h1>
         <Search search={this.onSearchChange} />
-        <Card robots={robots} />
+        <Card robots={filterRobot} />
       </div>
     );
   }
