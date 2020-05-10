@@ -14,6 +14,7 @@ class App extends React.Component {
     this.setState({ searchfield: e.target.value });
   };
   render() {
+    console.log(this.state);
     const { robots } = this.state;
     return (
       <div className="App">

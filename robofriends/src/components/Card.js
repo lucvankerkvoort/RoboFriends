@@ -6,11 +6,12 @@ const Card = ({ robots }) => {
       {robots.map((user, i) => {
         const { id, name, email } = user;
         return (
-          <div id={id} className="card">
+          <div id={id} className="card" key={i}>
             <img
               src={`https://robohash.org/${id}`}
               alt="robots"
               width="200px"
+              key={i}
             />
             <div>
               <h2>{name}</h2>
