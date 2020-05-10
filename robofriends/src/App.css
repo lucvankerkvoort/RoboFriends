@@ -1,12 +1,15 @@
 .App {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
@@ -33,4 +36,10 @@
 .card:active {
   transform: scale(0.9);
   transition-duration: 1s;
+}
+
+input {
+  padding: 5px;
+  background: lightblue;
+  border: 2px solid lightslategray;
 }
