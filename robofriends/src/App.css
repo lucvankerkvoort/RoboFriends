@@ -11,32 +11,42 @@
     U+FEFF, U+FFFD;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background: linear-gradient(
+      to right bottom,
+      #283d89,
+      #274a97,
+      #2557a4,
+      #2364b1,
+      #2171be,
+      #1382cb,
+      #0292d8,
+      #00a3e3,
+      #00baed,
+      #00d1f2,
+      #26e6f3,
+      #5ffbf1
+    )
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to right bottom,
-    #283d89,
-    #274a97,
-    #2557a4,
-    #2364b1,
-    #2171be,
-    #1382cb,
-    #0292d8,
-    #00a3e3,
-    #00baed,
-    #00d1f2,
-    #26e6f3,
-    #5ffbf1
-  );
-  background-repeat: no-repeat;
 }
 
 h1 {
   font-family: "Pacifico";
   color: lightseagreen;
+  text-shadow: 1px 2px black;
 }
 .card-section {
   display: flex;
@@ -64,12 +74,12 @@ h1 {
 }
 .card:hover {
   transform: scale(1.1);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 .card:active {
   transform: scale(0.9);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 input {
