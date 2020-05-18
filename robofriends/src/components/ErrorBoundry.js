@@ -9,7 +9,11 @@ class ErrorBoundry extends React.Component {
   };
   render() {
     const { hasError } = this.state;
-    return <p>Oops something went wrong</p>;
+    return hasError ? (
+      <h1>Oops... Something went wrong</h1>
+    ) : (
+      this.props.children
+    );
   }
 }
 
