@@ -4,7 +4,6 @@ import Card from "./components/Card";
 import Search from "./components/Search";
 import Scroll from "./components/Scroll";
 import ErrorBoundry from "./components/ErrorBoundry";
-import { robots } from "./components/robots";
 import "./App.css";
 
 import { setSearchField, requestRobots } from "./actions";
